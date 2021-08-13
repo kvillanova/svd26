@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^([\d]+(?:\.\d+)?)(?:-([a-zA-Z,]+))(?:-imunes=([a-zA-Z,]+))?$ index.php?no=$1&tribo=$2&imunes=$3 [L]
+RewriteRule ^texto/([\d]+(?:\.\d+)?)(?:-([a-zA-Z,]+))?$ texto.php?no=$1&tribo=$2 [L]
+RewriteCond %{REQUEST_URI} !index.php
+RewriteRule ^(\w+)$ $1.php [L]

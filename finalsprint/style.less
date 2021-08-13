@@ -1,0 +1,127 @@
+body, html {
+	height: 100%;
+}
+
+p.inst {
+	max-width: 550px;
+	width: calc(100vw ~'-' 20px);
+	margin: 20px auto;
+	font-size:1.2em;
+}
+
+.copypaste {
+	cursor: pointer;
+}
+
+h5 {
+	font-size: 1.5em;
+	//font-weight: 300;
+	border-top: solid 1px #555;
+	margin: 10px auto;
+	padding:10px 0;
+	text-transform: uppercase;
+	&:first-of-type {
+		//border-top: none;
+	}
+}
+
+div.score {
+	display: grid;
+	margin: 20px auto;
+	width: calc(100vw ~'-' 20px);
+	grid-gap: 3px;
+	max-width: 1200px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 6fr;
+	
+	&.god {
+		grid-template-columns: 1fr 1.5fr 1fr 1fr 6fr 5fr;
+	}
+	@media screen and (max-width:649px) {
+		grid-template-columns: 0.5fr minmax(auto,120px) 1fr 1fr;
+		&.god {
+			grid-template-columns: 0.5fr minmax(auto,120px) 1fr 1fr;
+		}
+		.header {
+			display: none;
+		}
+		.tempos, .resp {
+			grid-column: span 4;
+		}
+		.pos p:before {
+			content: '#';
+		}
+		.placar p:before {
+			content: 'Status: ';
+		}
+		.placar p {
+			word-break: break-all;
+		}
+	}
+	&.god {
+		//grid-template-columns: 1fr 2fr 1fr 5fr 4fr;
+	}
+	
+	.header {
+		background:none;
+		color:white;
+		align-self: end;
+		text-transform: uppercase;
+		font-weight: 900;
+		&.c2 {
+			grid-column: span 2;
+		}
+	}
+	div {
+		background:#555;
+		color:black;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		p {
+			display: inline;
+			margin: 0;
+			align-self:center;
+		}
+	}
+	img {
+		width: 100%;
+		align-self:center;
+	}	
+	.tempos {
+		display: grid;
+		grid-template-columns: minmax(0,1.5fr) minmax(auto,4fr);
+		.label {
+			text-align: right;
+			justify-content: flex-end;
+			//font-weight: 300;
+			background: black;
+			color:white;
+			padding: 0 10px;
+			word-break: keep-all;
+		}
+		.tempo {
+			text-align: left;
+			justify-content: flex-start;
+			padding: 0 10px;
+		}
+		& div:nth-child(n+3) {
+			border-top: solid 1px #111;
+		}
+	}
+	
+	.label {
+		//background:black;
+		//color:white;
+		//justify-content: flex-end;
+		//padding-right: 10px;
+	}
+	.tempo {
+		//justify-content: flex-start;
+		//padding-left: 10px;
+	}
+	
+}

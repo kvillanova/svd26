@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^(getsetgo)$ ignite.php?$1 [L]
+
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteRule ^(\w+)$ $1.php [L]

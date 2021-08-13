@@ -1,0 +1,27 @@
+body {
+  margin: 40px 0;
+  text-align: center;
+  font-family: Verdana, "sans-serif";
+}
+form {
+  margin: 20px 0;
+}
+form textarea {
+  display: block;
+  margin: 0 auto;
+}
+form button {
+  font-size: 1.2em;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+input {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+input[type=file] {
+  font-size: 1em;
+}

@@ -1,0 +1,108 @@
+button.ativar {
+  background: #090;
+}
+button.desativar {
+  background: #900;
+}
+button.ativar,
+button.desativar {
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white;
+}
+.peeps {
+  display: grid;
+  max-width: 500px;
+  margin: 0 auto;
+  width: calc(100vw - 20px);
+}
+.peeps.part {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+}
+.peeps.part div:nth-child(-n+4) {
+  border-right: solid 2px #999;
+}
+.peeps.mods {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.peeps.mods div:nth-child(-n+2) {
+  border-right: solid 2px #999;
+}
+.peeps.elim {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.peeps.elim div:nth-child(-n+3) {
+  border-right: solid 2px #999;
+}
+.peeps div {
+  border-right: solid 2px #ccc;
+  border-bottom: solid 2px #ccc;
+  display: grid;
+}
+.peeps div p {
+  margin: 5px 0;
+}
+.peeps .header {
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.peeps .status {
+  color: white;
+  text-transform: uppercase;
+}
+.peeps .status.red {
+  background: #900;
+}
+.peeps .status.green {
+  background: #090;
+}
+.peeps .status.out {
+  background: #600;
+}
+.peeps .status.quitter {
+  background: #78549a;
+}
+.peeps .eliminar {
+  padding: 0 10px;
+  background: #600;
+  color: #fff;
+}
+.peeps .verconta {
+  border-right: none;
+  text-transform: uppercase;
+  color: crimson;
+}
+.peeps .money::before {
+  content: 'ƒ';
+}
+.section {
+  border-top: solid 1px #aaa;
+  padding: 10px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+  align-content: stretch;
+  width: calc(100vw - 20px);
+}
+.section h3 {
+  margin: 0;
+}
+.section > * {
+  margin: 0 0 0 5px;
+}
+.section > div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section > div > * {
+  margin: 0 0 0 2px;
+}

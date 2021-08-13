@@ -1,0 +1,27 @@
+{
+	"VLL":{
+		"idolo":"V7",
+		"pistas":[["N11","M19"],["Y2","AD32"],["B2","C16"]],
+		"textos": ["No nordeste está o que procura.","A resposta é Y.","Vá para outra ilha."]
+	},
+	"DAV":{
+		"idolo":"N33",
+		"pistas":[["I20","O19"],["D25","T32"],["O7","AB9"]],
+		"textos": ["No sul está o que procura.","Você precisa entrar na água.","Saia desta ilha."]
+	},
+	"AZV":{
+		"idolo":"H32",
+		"pistas":[["X14","T21"],["F25","AF3"],["A18","M21"]],
+		"textos": ["No sudeste está o que procura.","Busque a elevação mais alta.","Vá para outra montanha."]
+	},
+	"FUS":{
+		"idolo":"AB37",
+		"pistas":[["J11", "U4", "AI6"],["B29", "I21", "Q26"],["AL39", "AP14", "AR33"]],
+		"textos": ["O Sul é meu chamariz.","Vou até onde possa ver o Sol que nasce atrás das pedras e do oceano.","https://youtu.be/LNBjMRvOB5M"]
+	},
+	"MOD":{
+		"idolo":"A1",
+		"pistas":[["B1","C1"],["A2","B2"],["A3","B3"]],
+		"textos": ["Essa é a primeira pista.","Essa é a segunda pista.","Essa é a terceira pista."]
+	}
+}

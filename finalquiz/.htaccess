@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule ^(thelasttime)$ ignite.php?$1 [L]
+
+RewriteRule ^(\w+)\.jpg$ sx.php?n=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(\w+)$ $1.php [L]

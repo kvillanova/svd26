@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^(recomecando)$ ignite.php?$1 [L]
+RewriteRule ^\w{8}(\w{2})\w{7}(\d)\.png$ sx.php?n=$1&a=$2 [L]
+RewriteRule ^(\w+)$ $1.php [L]

@@ -1,0 +1,105 @@
+body,
+html {
+  height: 100%;
+}
+p.inst {
+  max-width: 550px;
+  width: calc(100vw - 20px);
+  margin: 20px auto;
+  font-size: 1.2em;
+}
+.copypaste {
+  cursor: pointer;
+}
+h5 {
+  font-size: 1.5em;
+  border-top: solid 1px #555;
+  margin: 10px auto;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+div.score {
+  display: grid;
+  margin: 20px auto;
+  width: calc(100vw - 20px);
+  grid-gap: 3px;
+  max-width: 1200px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 6fr;
+}
+div.score.god {
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 6fr 5fr;
+}
+@media screen and (max-width: 649px) {
+  div.score {
+    grid-template-columns: 0.5fr minmax(auto, 120px) 1fr 1fr;
+  }
+  div.score.god {
+    grid-template-columns: 0.5fr minmax(auto, 120px) 1fr 1fr;
+  }
+  div.score .header {
+    display: none;
+  }
+  div.score .tempos,
+  div.score .resp {
+    grid-column: span 4;
+  }
+  div.score .pos p:before {
+    content: '#';
+  }
+  div.score .placar p:before {
+    content: 'Status: ';
+  }
+  div.score .placar p {
+    word-break: break-all;
+  }
+}
+div.score .header {
+  background: none;
+  color: white;
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+div.score .header.c2 {
+  grid-column: span 2;
+}
+div.score div {
+  background: #555;
+  color: black;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+div.score div p {
+  display: inline;
+  margin: 0;
+  align-self: center;
+}
+div.score img {
+  width: 100%;
+  align-self: center;
+}
+div.score .tempos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(auto, 4fr);
+}
+div.score .tempos .label {
+  text-align: right;
+  justify-content: flex-end;
+  background: black;
+  color: white;
+  padding: 0 10px;
+  word-break: keep-all;
+}
+div.score .tempos .tempo {
+  text-align: left;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+div.score .tempos div:nth-child(n+3) {
+  border-top: solid 1px #111;
+}

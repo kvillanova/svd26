@@ -1,0 +1,78 @@
+p.inst {
+	text-align: justify;
+	width: calc(100vw~'-'40px);
+	max-width: 500px;
+	margin: 10px auto;
+	font-size: 1.2rem;
+}
+h3 {
+	text-transform: uppercase;
+	margin: 20px 0 0;
+	font-weight: 300;
+}
+button {
+	padding: 10px;
+	margin: 20px auto;
+	text-transform: uppercase;
+	background: #000;
+	color:#fff;
+	border:0;
+	font-size:1.5em;
+	&:hover {
+		background: #555;
+	}
+	&.go {
+		background: darkgreen;
+		&:hover {
+			background:lighten(darkgreen,20);
+			color:#000;
+		}
+	}
+	&.quit {
+		background: darkred;
+		&:hover {
+			background:lighten(darkred,20);
+			color:#000;
+		}
+	}
+	&.go,&.quit {
+		margin: 40px 5px 0;
+	}
+}
+h1 {
+	margin: 20px 0;
+}
+#garrafas {
+	display: grid;
+	grid-template-columns: repeat(12,80px);
+	grid-gap: 5px;
+	justify-content: center;
+	padding: 20px 0;
+	margin: 0 auto;
+	@media screen and (max-width:675px) {
+		grid-template-columns: repeat(auto-fit,80px);
+	}
+}
+#drops {
+	display: grid;
+	margin: 0 auto;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit,120px);
+}
+.droppable {
+	width: 120px;
+	height: 180px;
+	display: inline-block;
+	background-color: #ddd;
+	border: dashed 1px #333;
+}
+.drag {
+	border: solid 1px #666;
+	position: absolute;
+}
+.yellow {
+	background-color: #F5F7D0;
+}
+.garrafa {
+	margin: 0 13px 0 0;
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+@tribos:
+azv #cc0000 white, 
+vll #59d3a4 black,
+dav #f5b120 black,
+fus #834dff white,
+mod #999999 black;
+
+.tribo {
+	background:#dedede;
+	color:black;
+}
+
+.make-classes(tribo, @tribos);
+
+.make-classes(@prefix, @list) {
+    .iter(length(@list));
+    .iter(@i) when (@i > 0) {
+        .iter(@i - 1);
+        @pair:  extract(@list, @i); 
+        @key:   extract(@pair, 1);
+        @bg: extract(@pair, 2); 
+        @color: extract(@pair, 3);
+		.@{prefix}.@{key} {
+			background-color:@bg !important;
+			color:@color !important;
+		}
+    }
+}
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+    background: #191919;
+    text-align: center;
+    font-variant-ligatures: none;
+    color: #fff !important;
+    overflow: auto;
+    font-family: "Lato", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+a {
+  	text-decoration: none;
+	&:hover h3, &:hover p {
+		color:#ccc;
+	}
+}
+
+input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-size: 1em;
+    text-align: center;
+	&[type=text] {
+		padding: 10px 20px;
+		border:none;
+		background:white;
+	}
+}
+
+button {
+	padding: 10px 20px;
+	background:#000;
+	color:white;
+	text-transform: uppercase;
+	border:0;
+}
+
+h1, h2 {
+    font-weight: 900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', 'Verdana', sans-serif;
+}
+h1 {
+    font-size: 5em;
+    color: #fff;
+    margin: 0;
+    line-height: 1em;
+	& em {
+		font-weight: 400;
+	}
+}
+h3 {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 0;
+}
+h5 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+table.score {
+    margin: 20px auto;
+    border-collapse: collapse;
+	th {
+		background: #222;
+	}
+	th, td {
+		padding: 5px 10px;
+  		border: solid 1px #999;
+	}
+	td {
+		&.pic {
+			padding: 0;
+		}
+		img {
+			width: 80px;
+		}
+	}
+	
+	tr:nth-child(even) td {
+		background:#555;
+	}
+	tr:nth-child(even) td {
+		background:#666;
+	}
+}
+
+//
+//PAINEL - HEADER
+//
+
+header {
+	background-color: darkgray;
+	color: #fff;
+	margin: 0;
+	padding: 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	p {
+		color:white !important;
+	}
+	
+	@media screen and (max-width:1023px) {
+		flex-direction: column-reverse;
+		&>p:last-of-type {
+			margin:10px 0;
+		}
+	}
+	
+	nav {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		
+		&:first-of-type {
+			@media screen and (max-width:1023px) {
+				flex-direction: column;
+				h2 {
+					font-size:2.5em;
+				}
+				
+				div {
+					font-size:.95em;
+				}
+				
+				&+p {
+					font-size:0.8em;
+				}
+			}
+		}
+		
+		h2 {
+			margin: 0 5px;
+			text-transform: uppercase;
+			padding-right: 5px  !important;
+			border-right:solid 6px #fff !important;
+		}
+		
+		&>div {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			&>* {
+				margin: 10px 5px;
+			}
+		}
+		
+		p {
+			font-size: 1.3em;
+			margin:0 20px;
+		}
+	}
+	p {
+		margin:0 5px;
+		color:#fff;
+	}
+}
+
+.err-bar {
+	margin: -20px 0 0;
+	padding: 30px 20px;
+	color:#000;
+	background:#ccc;
+	h2, h4 {
+		color:black;
+		margin: 0;
+	}
+	h4 {
+		margin: 10px 0;
+	}
+	h2 {
+		margin: -10px 0 0;
+	}
+}
+
+.box:not(.fr-fullscreen) {
+	width: calc(100vw ~'-' 20px);
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#oks {
+	display: grid;
+	max-width: 500px;
+	margin: 20px auto;
+	width: calc(100vw ~'-' 20px);
+	grid-template-columns: minmax(20px,auto) 80px repeat(2,minmax(20px,auto));
+	grid-gap: 3px;
+	div:nth-child(-n+4) {
+		background:none;
+		color:white;
+	}
+	div {
+		background:#555;
+		color:black;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		p {
+			display: inline;
+			margin: 0;
+			align-self:center;
+		}
+	}
+	img {
+		width: 100%;
+		align-self:center;
+	}
+	.header {
+		align-self: end;
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+}

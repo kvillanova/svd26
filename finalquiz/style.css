@@ -1,0 +1,149 @@
+p.pergunta {
+  max-width: 800px;
+  margin: 10px auto;
+  width: calc(100vw - 20px);
+  text-align: justify;
+  text-align-last: left;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+#alternativas {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  grid-gap: 3px;
+  width: calc(100vw - 20px);
+  margin: 0 auto;
+  counter-reset: alternativas;
+}
+#alternativas .alternativa {
+  background: #555;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 15px 5px;
+}
+#alternativas .alternativa.selecionada {
+  background: #ccc;
+  color: black;
+}
+#alternativas .alternativa:not(.correta),
+#alternativas .alternativa:not(.errada),
+#alternativas .alternativa:not(.gabarito),
+#alternativas .alternativa:not(.normal) {
+  cursor: pointer;
+}
+#alternativas .alternativa.correta {
+  background-color: darkgreen;
+}
+#alternativas .alternativa.errada {
+  background-color: darkred;
+}
+#alternativas .alternativa.gabarito {
+  background-color: lightgreen;
+  color: black;
+}
+#alternativas .alternativa * {
+  margin: 0 5px;
+}
+#alternativas .alternativa input {
+  display: none;
+}
+#alternativas .alternativa p {
+  text-align: justify;
+  text-align-last: left;
+}
+#alternativas .alternativa p::before {
+  counter-increment: alternativas;
+  content: counter(alternativas, upper-alpha) ") ";
+}
+div.score {
+  display: grid;
+  margin: 20px auto;
+  width: calc(100vw - 20px);
+  grid-gap: 3px;
+  max-width: 1200px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 6fr;
+}
+div.score.god {
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 6fr 5fr;
+}
+@media screen and (max-width: 649px) {
+  div.score {
+    grid-template-columns: 0.5fr minmax(auto, 120px) 1fr 1fr;
+  }
+  div.score.god {
+    grid-template-columns: 0.5fr minmax(auto, 120px) 1fr 1fr;
+  }
+  div.score .header {
+    display: none;
+  }
+  div.score .tempos,
+  div.score .resp {
+    grid-column: span 4;
+  }
+  div.score .pos p:before {
+    content: '#';
+  }
+  div.score .placar p:before {
+    content: 'Status: ';
+  }
+}
+div.score .header {
+  background: none;
+  color: white;
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+div.score .header.c2 {
+  grid-column: span 2;
+}
+div.score div {
+  background: #555;
+  color: black;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+div.score div p {
+  display: inline;
+  margin: 0;
+  align-self: center;
+}
+div.score img {
+  width: 100%;
+  align-self: center;
+}
+div.score .tempos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(auto, 4fr);
+}
+div.score .tempos .label {
+  text-align: right;
+  justify-content: flex-end;
+  background: black;
+  color: white;
+  padding: 0 10px;
+  word-break: keep-all;
+}
+div.score .tempos .tempo {
+  text-align: left;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+div.score .tempos div:nth-child(n+3) {
+  border-top: solid 1px #111;
+}

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+.tribo {
+  background: #dedede;
+  color: black;
+}
+.tribo.azv {
+  background-color: #cc0000 !important;
+  color: white !important;
+}
+.tribo.vll {
+  background-color: #59d3a4 !important;
+  color: black !important;
+}
+.tribo.dav {
+  background-color: #f5b120 !important;
+  color: black !important;
+}
+.tribo.fus {
+  background-color: #834dff !important;
+  color: white !important;
+}
+.tribo.mod {
+  background-color: #999999 !important;
+  color: black !important;
+}
+body {
+  margin: 0;
+  padding: 20px 0;
+  border: none;
+  background: #191919;
+  text-align: center;
+  font-variant-ligatures: none;
+  color: #fff !important;
+  overflow: auto;
+  font-family: "Lato", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover h3,
+a:hover p {
+  color: #ccc;
+}
+input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font-size: 1em;
+  text-align: center;
+}
+input[type=text] {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+}
+button {
+  padding: 10px 20px;
+  background: #000;
+  color: white;
+  text-transform: uppercase;
+  border: 0;
+}
+h1,
+h2 {
+  font-weight: 900;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Verdana', sans-serif;
+}
+h1 {
+  font-size: 5em;
+  color: #fff;
+  margin: 0;
+  line-height: 1em;
+}
+h1 em {
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0;
+}
+h5 {
+  font-size: 1.5em;
+  color: #fff;
+}
+table.score {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+table.score th {
+  background: #222;
+}
+table.score th,
+table.score td {
+  padding: 5px 10px;
+  border: solid 1px #999;
+}
+table.score td.pic {
+  padding: 0;
+}
+table.score td img {
+  width: 80px;
+}
+table.score tr:nth-child(even) td {
+  background: #555;
+}
+table.score tr:nth-child(even) td {
+  background: #666;
+}
+header {
+  background-color: darkgray;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header p {
+  color: white !important;
+}
+@media screen and (max-width: 1023px) {
+  header {
+    flex-direction: column-reverse;
+  }
+  header > p:last-of-type {
+    margin: 10px 0;
+  }
+}
+header nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1023px) {
+  header nav:first-of-type {
+    flex-direction: column;
+  }
+  header nav:first-of-type h2 {
+    font-size: 2.5em;
+  }
+  header nav:first-of-type div {
+    font-size: .95em;
+  }
+  header nav:first-of-type + p {
+    font-size: 0.8em;
+  }
+}
+header nav h2 {
+  margin: 0 5px;
+  text-transform: uppercase;
+  padding-right: 5px  !important;
+  border-right: solid 6px #fff !important;
+}
+header nav > div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header nav > div > * {
+  margin: 10px 5px;
+}
+header nav p {
+  font-size: 1.3em;
+  margin: 0 20px;
+}
+header p {
+  margin: 0 5px;
+  color: #fff;
+}
+.err-bar {
+  margin: -20px 0 0;
+  padding: 30px 20px;
+  color: #000;
+  background: #ccc;
+}
+.err-bar h2,
+.err-bar h4 {
+  color: black;
+  margin: 0;
+}
+.err-bar h4 {
+  margin: 10px 0;
+}
+.err-bar h2 {
+  margin: -10px 0 0;
+}
+.box:not(.fr-fullscreen) {
+  width: calc(100vw - 20px);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#oks {
+  display: grid;
+  max-width: 500px;
+  margin: 20px auto;
+  width: calc(100vw - 20px);
+  grid-template-columns: minmax(20px, auto) 80px repeat(2, minmax(20px, auto));
+  grid-gap: 3px;
+}
+#oks div:nth-child(-n+4) {
+  background: none;
+  color: white;
+}
+#oks div {
+  background: #555;
+  color: black;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+#oks div p {
+  display: inline;
+  margin: 0;
+  align-self: center;
+}
+#oks img {
+  width: 100%;
+  align-self: center;
+}
+#oks .header {
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+}

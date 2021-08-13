@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteRule ^(\w+)$ $1.php [L]
+
+RewriteRule ^script.js$ sizzle.php [L]

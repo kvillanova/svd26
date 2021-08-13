@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^quest-([0-9.e,-]+)$ quest.php?id=$1 [L]
+
+RewriteCond %{REQUEST_URI} !index.php
+RewriteRule ^(\w+)$ $1.php [L]

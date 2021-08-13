@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  background-image: none;
+  padding: 20px 0;
+}
+form {
+  margin: 0 auto;
+}
+form input {
+  margin: 10px;
+  border: none;
+}
+form input[type=number] {
+  width: 50px;
+  padding: 10px 5px;
+}
+form input[type=text] {
+  padding: 10px 20px;
+}
+form button {
+  padding: 10px 20px;
+}
+form select {
+  margin: 10px;
+  padding: 10px 20px;
+}
+.console pre {
+  text-align: left;
+}

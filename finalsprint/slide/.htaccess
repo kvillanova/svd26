@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteRule ^(\d+)_(\w{15})\.jpg$ lf.php?n=$1&m=$2 [L]
+RewriteRule ^puzzle\.js$ puzzlex.php [L]
+
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteRule ^(\w+)$ $1.php [L]

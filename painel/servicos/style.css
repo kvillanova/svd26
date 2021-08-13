@@ -1,0 +1,88 @@
+#services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) minmax(0, auto);
+  width: calc(100vw - 40px);
+  max-width: 500px;
+  justify-content: center;
+  margin: 10px auto;
+}
+#services div {
+  border-right: solid 1px #999;
+  display: grid;
+  place-content: center;
+  background: #bbb;
+}
+#services div p {
+  margin: 5px 0;
+}
+#services div:nth-last-child(n+3) {
+  border-bottom: solid 1px #999;
+}
+#services div:nth-child(6n),
+#services div:nth-child(6n-1),
+#services div:nth-child(6n-2) {
+  background: #aaa;
+}
+#services .header {
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: none;
+}
+#services .icos {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-self: start;
+}
+#services .icos button {
+  width: 60px;
+}
+#vars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, auto));
+  width: calc(100vw - 40px);
+  max-width: 800px;
+  justify-content: center;
+  margin: 10px auto;
+}
+#vars div {
+  border-right: solid 1px #999;
+  display: grid;
+  place-content: center;
+  background: #bbb;
+  padding: 20px;
+}
+#vars div p {
+  margin: 5px 0;
+}
+#vars div.header {
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: none;
+  padding: 0;
+}
+#vars div:nth-last-child(n+7) {
+  border-bottom: solid 1px #999;
+}
+#vars div:nth-child(10n),
+#vars div:nth-child(10n-1),
+#vars div:nth-child(10n-2),
+#vars div:nth-child(10n-3),
+#vars div:nth-child(10n-4) {
+  background: #aaa;
+}
+#vars .icos {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-self: start;
+}
+#vars .icos button {
+  width: 60px;
+}

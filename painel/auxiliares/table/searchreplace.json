@@ -1,0 +1,29 @@
+{
+	"serp": [{
+			"search": "%<a.*?title=\"(.*?)\".*?>.*?img.*?data-image-name=\"(.*?)\".*?width=\"(.*?)\"(.*?)</a>%uis",
+			"replace": "[[Arquivo:$2|$3px|link=$1]]"
+		}, {
+			"search": "%<a.*?title=\"(.*?)\".*?>(.*?)</a>%sui",
+			"replace": "[[$1|$2]]"
+		}, {
+			"search": "%</?(b|strong)>%sui",
+			"replace": "'''"
+		}, {
+			"search": "%</?(em|i)>%sui",
+			"replace": "''"
+		}, {
+			"search": "%&amp;%",
+			"replace": "&"
+		}, {
+			"search": "%<(p|div).*?>(.*?)</\\1>%",
+			"replace": "$2"
+		}, {
+			"search": "%<cite.*?id=\"nota_(.*?)\".*?><a.*?><b>.*?([0-9]{1,2})</b></a></cite>%sui",
+			"replace": ""
+		}, {
+			"search": "%<span.*?class=\"reference.*?id=\"ref_(.*?)\">.*?<a.*?>(.*?)</a>.*?</span>%uis",
+			"replace": "{{ref|$1|$2}}"
+		}
+
+	]
+}
