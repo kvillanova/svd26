@@ -7,6 +7,8 @@ The system has been build from the ground up by Kevin Villanova. All the rights 
 ## About the project
 This is a web-based game that relies on social strategy, inspired by the reality TV show Survivor, from CBS, on the United States. It's a free of charge competition with purposes of entretainment, to reunite friends and meet people from all over Brazil, and sometimes even from outside the borders. This game uses social media for communication and engagement, and this system for the players to perform challenges and other internal activities inside the game.
 
+You can see the official Wiki of the project at https://svd.cc. (All the wiki contents will be in Brazilian Portuguese, the official language of the project).
+
 ### /painel/
 This is the administration area. Only the moderators of the game can have access. (For testing purposes, it's not locked this time). Here we have all the players' keys (their unique id to access the system), the challenges that are installed, the idols and clues that are found, and the others services (twists) that are used by the game.
 
